@@ -31,7 +31,8 @@
 									"var jsonData = pm.response.json();\r",
 									"pm.test(\"Response ID the same as in environment\", function () {\r",
 									"    pm.expect(jsonData.id).to.eql(pm.environment.get(\"pet_id\"));\r",
-									"});"
+									"});\r",
+									""
 								],
 								"type": "text/javascript"
 							}
@@ -134,6 +135,10 @@
 									"var jsonData = pm.response.json();\r",
 									"pm.test(\"Response ID the same as in environment\", function () {\r",
 									"    pm.expect(jsonData.category.id).to.eql(pm.environment.get(\"category_id\"));\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
 									"});"
 								],
 								"type": "text/javascript"
